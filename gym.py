@@ -1,23 +1,30 @@
+from tkinter.ttk import *
 from tkinter import *
 
-#def bt_click():
-   # lb2['text'] = 
-  
-    
+def bt_click():
+      en.get()
+      if (en)['text'] == 'Segunda':
+         lb_resp['text'] = "Peito e Triceps" 
+        
+   
 
 janela = Tk()
+janela.geometry("400x400")
+janela.resizable(width=FALSE, height=FALSE)
+
 
 janela.title("Rotina Acadêmia")
-lb = Label(janela, text="Digite o dia da semana e veja qual é o treino do dia!")
+lb = Label(janela, text="Veja qual o treino do dia!", font=("Arial 13 bold"))
 lb.place(x=100, y=30)
 
-treino = Entry(janela, width=20)
-treino.place(x=100, y=70)
+en = Entry(janela)
+en.place(x=90, y=100)
 
-bt = Button(janela, text=("Ver treino"))
-bt.place(x=110, y=100)
+bt = Button(janela, text=('Ver treino'), command=bt_click)
+bt.place(x=100, y=150)
+
+lb_resp = Label(janela, text="Resposta")
+lb_resp.place(x=100 ,y=190)
 
 
-#"segunda:Quadriceps terca: Peito e Triceps quarta:(Ombros) quinta: (Costas e Biceps) sexta: Pernas: (Posterior)"
-janela.geometry("400x400")
 janela.mainloop()

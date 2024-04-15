@@ -10,6 +10,10 @@ def btclick():
         lb["text"] = "Valores informados invalidos"
         
 janela = Tk()
+janela.title("Calculadora")
+lb1 = Label(janela, text="Some Valores!")
+lb1.place(x=100 ,y=50)
+
 en = Entry(janela)
 en.place(x=100, y=100)
 
